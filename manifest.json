@@ -1,0 +1,30 @@
+{
+  "description": "Blocks specific scripts from loading on all pages.",
+  "manifest_version": 2,
+  "name": "Block Script",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "block-script@coralproject.net"
+    }
+  },
+  "browser_action": {
+    "default_icon": "icons/icon-32.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "<all_urls>"
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
